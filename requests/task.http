@@ -1,0 +1,33 @@
+###
+GET http://localhost:4000/api/tasks
+
+###
+GET http://localhost:4000/api/tasks?page=0&size=3&title=modificada
+
+###
+GET http://localhost:4000/api/tasks/done
+
+###
+POST http://localhost:4000/api/tasks
+Content-Type: application/json
+
+{
+    "title": "Tarea de ejemplo",
+    "description": "Descripcion de ejemplo",
+    "done": true
+}
+
+###
+GET http://localhost:4000/api/tasks/5fededd564b42c2604e67222
+
+###
+DELETE http://localhost:4000/api/tasks/5fedf7a42653f847f4977835
+
+###
+PUT http://localhost:4000/api/tasks/5fededd564b42c2604e67222
+Content-Type: application/json
+
+{
+    "title": "Tarea de ejemplo modificada",
+    "description": "Descripcion de ejemplo modificada"
+}
